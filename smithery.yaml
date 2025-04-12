@@ -1,0 +1,24 @@
+# Smithery configuration file: https://smithery.ai/docs/deployments
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      ALCHEMY_KEY:
+        type: string
+        description: The Key of the Alchemy.
+      INFURA_KEY:
+        type: string
+        description: The Key of the Infura.
+      ANKR_KEY:
+        type: string
+        description: The Key of the Ankr.
+      PRIVATE_KEY:
+        type: string
+        description: The EVM wallet Private key.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    config=>({command:'node',args:['dist/index.js'],env:{ALCHEMY_KEY:config.ALCHEMY_KEY,INFURA_KEY:config.INFURA_KEY,ANKR_KEY:config.ANKR_KEY,PRIVATE_KEY:config.PRIVATE_KEY}})
