@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/laplaceman-web3-assistant-mcp-badge.png)](https://mseep.ai/app/laplaceman-web3-assistant-mcp)
+
 # Web3 Assistant MCP
 
 A secure blockchain smart contract interaction toolkit with multi-chain support.
